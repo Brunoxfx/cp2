@@ -1,6 +1,4 @@
-/**
- * Representa um pacote a ser entregue pelo sistema FiapDelivery.
- */
+/** Representa um pacote a ser entregue. */
 public class Pacote {
 
     private String codigo;
@@ -8,11 +6,9 @@ public class Pacote {
     private String status;
 
     /**
-     * Construtor da classe Pacote.
-     *
-     * @param codigo  Código identificador único do pacote
-     * @param pesoKg  Peso do pacote em quilogramas (deve ser positivo)
-     * @param status  Status inicial do pacote (ex: "Pendente")
+     * @param codigo  Código identificador do pacote
+     * @param pesoKg  Peso em kg (deve ser positivo)
+     * @param status  Status inicial (ex: "Pendente")
      */
     public Pacote(String codigo, double pesoKg, String status) {
         if (codigo == null || codigo.isBlank()) {
@@ -26,11 +22,7 @@ public class Pacote {
         this.status = status;
     }
 
-    /**
-     * Atualiza o status do pacote.
-     *
-     * @param novoStatus Novo status a ser definido (ex: "Em trânsito", "Entregue")
-     */
+    /** Atualiza o status do pacote. */
     public void atualizarStatus(String novoStatus) {
         if (novoStatus == null || novoStatus.isBlank()) {
             throw new IllegalArgumentException("O status não pode ser vazio.");
