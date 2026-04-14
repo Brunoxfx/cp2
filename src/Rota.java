@@ -1,16 +1,10 @@
-/**
- * Representa uma rota de entrega, associando um {@link Pacote} a um {@link Veiculo}.
- * A associação com Veiculo é polimórfica: aceita Caminhao, Moto ou qualquer
- * outro veículo que venha a ser criado no futuro.
- */
+/** Associa um Pacote a um Veiculo para realizar uma entrega. */
 public class Rota {
 
     private Pacote pacote;
     private Veiculo veiculo;
 
-    /**
-     * Construtor da classe Rota.
-     *
+     /**
      * @param pacote  Pacote a ser transportado
      * @param veiculo Veículo responsável pela entrega
      */

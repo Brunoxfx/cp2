@@ -1,17 +1,12 @@
-/**
- * Representa uma moto de entrega.
- * Herda os atributos comuns de {@link Veiculo} e indica se possui baú.
- */
+/** Veículo de entrega do tipo moto. */
 public class Moto extends Veiculo {
 
     private boolean possuiBau;
 
     /**
-     * Construtor da classe Moto.
-     *
      * @param placa        Placa da moto
-     * @param capacidadeKg Capacidade máxima de carga em kg
-     * @param possuiBau    Indica se a moto possui baú de entrega
+     * @param capacidadeKg Capacidade máxima em kg
+     * @param possuiBau    Indica se a moto possui baú
      */
     public Moto(String placa, double capacidadeKg, boolean possuiBau) {
         super(placa, capacidadeKg);

@@ -1,18 +1,14 @@
-/**
- * Classe abstrata que representa um veículo de entrega.
- * Serve como base para os tipos específicos de veículo (Caminhao, Moto).
- */
+/** Classe base para os veículos de entrega (Caminhao, Moto). */
 public abstract class Veiculo {
 
     private String placa;
     private double capacidadeKg;
 
     /**
-     * Construtor da classe Veiculo.
-     *
-     * @param placa        Placa do veículo (ex: "ABC1D23")
-     * @param capacidadeKg Capacidade máxima de carga em quilogramas (deve ser positiva)
+     * @param placa        Placa do veículo
+     * @param capacidadeKg Capacidade máxima em kg (deve ser positiva)
      */
+
     public Veiculo(String placa, double capacidadeKg) {
         if (placa == null || placa.isBlank()) {
             throw new IllegalArgumentException("A placa não pode ser vazia.");

@@ -1,17 +1,12 @@
-/**
- * Representa um caminhão de entrega.
- * Herda os atributos comuns de {@link Veiculo} e adiciona o número de eixos.
- */
+/** Veículo de entrega do tipo caminhão. */
 public class Caminhao extends Veiculo {
 
     private int numeroDeEixos;
 
     /**
-     * Construtor da classe Caminhao.
-     *
-     * @param placa          Placa do caminhão
-     * @param capacidadeKg   Capacidade máxima de carga em kg
-     * @param numeroDeEixos  Número de eixos do caminhão
+     * @param placa         Placa do caminhão
+     * @param capacidadeKg  Capacidade máxima em kg
+     * @param numeroDeEixos Número de eixos
      */
     public Caminhao(String placa, double capacidadeKg, int numeroDeEixos) {
         super(placa, capacidadeKg);
