@@ -10,6 +10,9 @@ public class Caminhao extends Veiculo {
      */
     public Caminhao(String placa, double capacidadeKg, int numeroDeEixos) {
         super(placa, capacidadeKg);
+        if (numeroDeEixos <= 0) {
+            throw new IllegalArgumentException("O número de eixos deve ser positivo.");
+        }
         this.numeroDeEixos = numeroDeEixos;
     }
 
