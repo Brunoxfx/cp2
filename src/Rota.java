@@ -1,14 +1,20 @@
 /** Associa um Pacote a um Veiculo para realizar uma entrega. */
 public class Rota {
 
-    private Pacote pacote;
-    private Veiculo veiculo;
+    private final Pacote pacote;
+    private final Veiculo veiculo;
 
      /**
      * @param pacote  Pacote a ser transportado
      * @param veiculo Veículo responsável pela entrega
      */
     public Rota(Pacote pacote, Veiculo veiculo) {
+        if (pacote == null) {
+            throw new IllegalArgumentException("O pacote não pode ser nulo.");
+        }
+        if (veiculo == null) {
+            throw new IllegalArgumentException("O veículo não pode ser nulo.");
+        }
         this.pacote = pacote;
         this.veiculo = veiculo;
     }

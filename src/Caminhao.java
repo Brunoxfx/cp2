@@ -1,7 +1,7 @@
 /** Veículo de entrega do tipo caminhão. */
 public class Caminhao extends Veiculo {
 
-    private int numeroDeEixos;
+    private final int numeroDeEixos;
 
     /**
      * @param placa         Placa do caminhão
@@ -10,6 +10,9 @@ public class Caminhao extends Veiculo {
      */
     public Caminhao(String placa, double capacidadeKg, int numeroDeEixos) {
         super(placa, capacidadeKg);
+        if (numeroDeEixos <= 0) {
+            throw new IllegalArgumentException("O número de eixos deve ser positivo.");
+        }
         this.numeroDeEixos = numeroDeEixos;
     }
 

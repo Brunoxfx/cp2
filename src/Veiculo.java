@@ -1,8 +1,8 @@
 /** Classe base para os veículos de entrega (Caminhao, Moto). */
 public abstract class Veiculo {
 
-    private String placa;
-    private double capacidadeKg;
+    private final String placa;
+    private final double capacidadeKg;
 
     /**
      * @param placa        Placa do veículo
