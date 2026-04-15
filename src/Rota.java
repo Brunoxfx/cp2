@@ -9,6 +9,12 @@ public class Rota {
      * @param veiculo Veículo responsável pela entrega
      */
     public Rota(Pacote pacote, Veiculo veiculo) {
+        if (pacote == null) {
+            throw new IllegalArgumentException("O pacote não pode ser nulo.");
+        }
+        if (veiculo == null) {
+            throw new IllegalArgumentException("O veículo não pode ser nulo.");
+        }
         this.pacote = pacote;
         this.veiculo = veiculo;
     }

@@ -17,6 +17,9 @@ public class Pacote {
         if (pesoKg <= 0) {
             throw new IllegalArgumentException("O peso do pacote deve ser positivo.");
         }
+        if (status == null || status.isBlank()) {
+            throw new IllegalArgumentException("O status não pode ser vazio.");
+        }
         this.codigo = codigo;
         this.pesoKg = pesoKg;
         this.status = status;
