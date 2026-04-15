@@ -1,7 +1,7 @@
 /** Veículo de entrega do tipo moto. */
 public class Moto extends Veiculo {
 
-    private boolean possuiBau;
+    private final boolean possuiBau;
 
     /**
      * @param placa        Placa da moto

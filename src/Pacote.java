@@ -1,8 +1,8 @@
 /** Representa um pacote a ser entregue. */
 public class Pacote {
 
-    private String codigo;
-    private double pesoKg;
+    private final String codigo;
+    private final double pesoKg;
     private String status;
 
     /**
@@ -16,6 +16,9 @@ public class Pacote {
         }
         if (pesoKg <= 0) {
             throw new IllegalArgumentException("O peso do pacote deve ser positivo.");
+        }
+        if (status == null || status.isBlank()) {
+            throw new IllegalArgumentException("O status do pacote não pode ser vazio.");
         }
         this.codigo = codigo;
         this.pesoKg = pesoKg;
